@@ -5,25 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script defer src="api-client.js" type="script"></script>
-    <script defer src="script.js" type="script"></script>
-    <title>Final assignment: ToDo List</title>
+    <link href="style.css" rel="stylesheet" />
+    <script defer type="module" src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/cd7a17a43b.js" crossorigin="anonymous"></script>
+    
+      <title>Final assignment: ToDo List</title>
   </head>
 
   <body>
-    <main>
-      <div class="box-container">
-        <h1>ToDo List</h1>
-        <div class="box-items">
-          <input type="text" id="new-text-field" placeholder="New Task" />
-          <button id="button-task-Add">Add task</button>
-          <button id="button-task-Delete">Delete task</button>
-          <nav class="newTask">
-            <ul id="ul-list"></ul>
-          </nav>
-        </div>
-      </div>
-    </main>
+    <body>
+      <h1>ToDo List</h1>
+      <div class="input">
+      <input type="text" id="task" placeholder="Enter new task.">
+      <button id="submit">New task..</button>
+      <button><i class ="far fa-trash-alt"></i></button> 
+      <section id="list">
+      </section>
+      
+    </body>
   </body>
 
 </html>

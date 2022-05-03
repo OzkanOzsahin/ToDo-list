@@ -22,7 +22,7 @@ const getTaskAPI = async () => {
 
 
 //Post Task
-const addTaskAPI = async (task) => {
+export const addTaskAPI = async (task) => {
     try {
         const response = await fetch(`${endPoint}/`, {
             method: "POST",
@@ -42,7 +42,7 @@ const addTaskAPI = async (task) => {
 };
 
 //put Task
-const updateTaskAPI = async (id, task) => {
+export const updateTaskAPI = async (id, task) => {
     try {
         const response = await fetch(`${endPoint}/${id}`, {
             method: "PUT",
@@ -62,7 +62,7 @@ const updateTaskAPI = async (id, task) => {
 };
 
 //Delete task
-const deleteTaskAPI = async (id) => {
+export const deleteTaskAPI = async (id) => {
     try {
         const response = await fetch(`${endPoint}/${id}`, {
             method: "DELETE",
@@ -82,5 +82,4 @@ const deleteTaskAPI = async (id) => {
     }
 };
 
-getTaskAPI();
-addTaskAPI();
+
