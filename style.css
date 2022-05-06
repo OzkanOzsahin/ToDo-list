@@ -1,15 +1,13 @@
 body {
 
-background: #f4f48c;
-margin-top: 100px;
-margin-left: 100px;
-
-}
-
-h1 {
-
-    color:hsla(30, 2%, 21%, 0.936);
-    font-family: fantasy;
-};
-
-
+    background: hsl(60, 49%, 66%);
+    margin-top: 100px;
+    margin-left: 100px;
+    
+    }
+    
+    h1 {
+    
+        color:hsla(30, 2%, 21%, 0.936);
+        font-family: fantasy;
+    };

@@ -19,16 +19,15 @@ button.addEventListener("click", () => {
 
   // Create a delete button
   var deleteButton = document.createElement("button");
-  var editButton = document.createElement("delete");
-  deleteButton.innerHTML = "delete";
-  deleteButton.setAttribute("class", "btn delete");
+  var deleteButton = document.createElement("delete");
+  deleteButton.setAttribute("class", "far fa-trash-alt");
 
   
   //Create button section
   var buttons = document.createElement("div"); // 
   buttons.setAttribute("class", "buttons");
  
-  buttons.appendChild(deleteButton);    //deleteButton
+ buttons.appendChild(deleteButton);    //deleteButton
   listItem.appendChild(buttons);
 
     deleteButton.addEventListener('click', function () {
