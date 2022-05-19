@@ -1,4 +1,5 @@
 
+
 const url = 'http://localhost:3000';
 
 
@@ -7,7 +8,7 @@ const url = 'http://localhost:3000';
 
 const postData = async (value) => {
  
-  const data = {description: value, done: false};
+const data = {description: value, done: false};
 
   try {
     const response = await fetch(url, {
@@ -45,17 +46,17 @@ async function createDom() {
   const data = await getData();
   console.log(data);
   data.forEach(value => {
-    var listItem = document.createElement("li"); // Create li element.
-    var task = document.createElement("p"); // Create p element.
-    var text = document.createTextNode(value.description); // Create text for list item.
+    const listItem = document.createElement("li"); // Create li element.
+    const task = document.createElement("p"); // Create p element.
+    const text = document.createTextNode(value.description); // Create text for list item.
   });
     // comment: Get value._id put in paragraphs element.
     // comment: <p id="value._id"> eten </p>
-    const para = document.createElement("p");
-    const node = document.createTextNode("This is a paragraph.");
-    para.appendChild(text); // Append text to p element.
-    document.getElementById("myDIV").appendChild(para);
-    // listItem.appendChild(task); // Append p to list item.
+    //const para = document.createElement("p");
+   // const node = document.createTextNode("This is a paragraph.");
+    //para.appendChild(text); // Append text to p element.
+   // document.getElementById("myDIV").appendChild(para);
+    //listItem.appendChild(task); // Append p to list item.
     // Create a delete button
   var deleteButton = document.createElement("button");
   var deleteButton = document.createElement("delete");
@@ -120,6 +121,28 @@ button.addEventListener("click", () => {
 
   
 });
+
+
+
+
+ 
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
