@@ -52,7 +52,9 @@ async function createDom() {
   deleteButton.setAttribute("class", "far fa-trash-alt");
   buttons.appendChild(deleteButton);    //deleteButton
   listItem.appendChild(buttons);
-   taskList.appendChild(listItem);
+  taskList.appendChild(listItem);
+  
+
 
   });
   
