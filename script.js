@@ -1,6 +1,4 @@
 
-
-
 const url = 'http://localhost:3000';
 const taskList = document.getElementById("list");
 
@@ -56,14 +54,14 @@ async function createDom() {
   const deleteButton = document.createElement("button"); 
   deleteButton.setAttribute("id", value._id)
   deleteButton.addEventListener('click', event => {
-    
+  
     console.log(event.target.id)
 
-
+  
  
     const deleteTask = async (id) => {
       try {
-        const response = await fetch(`${'http://localhost:3000'}/${'083dd380-ae55-4c8a-b047-01fdf1904693'}`, {
+        const response = await fetch(`${'http://localhost:3000'}/${id}`, {
           method: "DELETE",
         });
         if (response.ok) {
@@ -72,21 +70,16 @@ async function createDom() {
       } catch (error) {
         console.log("Task is not deleted!" + error);
       }
+      
     }; 
     
-    deleteTask();
+    deleteTask(event.target.id);
     
-   
-  function removeListItemByText(text) {
-      const li = [...document.querySelectorAll("li")];
-      li.forEach(elem => {
-        if (elem.innerText == text) elem.parentNode.removeChild(elem);
-      });
-    }
     
-    document.getElementById("deleteButton") = function() {
-      removeListItemByText("FA");
-    };
+   // delete from html page
+
+       
+    
 
 // stap 1: krijg het id van het delete button 
     
@@ -130,7 +123,7 @@ async function createDom() {
 
 
   });
-  
+ 
   
   
 
@@ -155,6 +148,7 @@ button.addEventListener("click", () => {
     // Prevents empty list item.
     alert("You have to type a task!");
   } else {
+    
     
     postData(taskInput);
     createDom();  
