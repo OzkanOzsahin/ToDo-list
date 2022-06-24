@@ -40,6 +40,7 @@ const getData = async () => {
 getData()
 
 async function createDom() {
+  taskList.innerHTML = '';
  //stap 4 maak het ul leeg om te verkomen dat lijst continu wordt. tip: zie filmzoeker project.. 
   const data = await getData(); 
    console.log(data)
@@ -57,8 +58,6 @@ async function createDom() {
   
     console.log(event.target.id)
 
-  
- 
     const deleteTask = async (id) => {
       try {
         const response = await fetch(`${'http://localhost:3000'}/${id}`, {
@@ -74,45 +73,9 @@ async function createDom() {
     }; 
     
     deleteTask(event.target.id);
+    createDom();
     
     
-   // delete from html page
-
-       
-    
-
-// stap 1: krijg het id van het delete button 
-    
- 
-    // stap 2 : stuur het id naar het api delete functie 
-    // voorbeeld: delete(id)
-    //event.preventDefault
-    // stap 3: roep createDom functie aan.
-
-    // function deleteElement() {
-    //   const element = document.getElementById("submit");
-    //   element.delete();
-    
-    //  let task_id = event.target.value
-    // console.log("hello world")
-    // }
-    
-  // function myFuncti(id) {
-  //   console.log(event.target.classList) 
-  //   event.preventDefault();
-  //   if (event.target.classList.contains("fa-trash-alt")) {
-  //      let deleteId = event.target.getAttribute("id");
-  //     console.log("test")
-  //      console.log(deleteId);
-  //     todoList = todoList.filter((task) => {
-  //       return task.id !== deleteId;
-  //     });
-  //     console.log(todoList);
-  //  }
-  // }
-
-
-   //taskList.removeChild(li);
   });
 
   deleteButton.setAttribute("class", "far fa-trash-alt");
@@ -120,22 +83,12 @@ async function createDom() {
   listItem.appendChild(buttons);
   taskList.appendChild(listItem);
   
-
-
   });
  
   
-  
+  };
 
-   
-  
-};
-
-  // Add new list item to list
-    // const list = document.getElementById('list');
-    // list.appendChild(listItem);
-    // console.log(value)
-  
+ 
   createDom()
 
 
@@ -166,47 +119,6 @@ button.addEventListener("click", () => {
  
   
   
-
-
-
-
-
-
-
- 
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-  
-  
-
-
-
-
-
-
-
-
-
 
 
 

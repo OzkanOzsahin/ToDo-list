@@ -1,3 +1,4 @@
+const url = 'http://localhost:3000';
 const endPoint = `http://localhost:3000`;
 
 const getTaskAPI = async () => {
@@ -84,4 +85,37 @@ export const deleteTaskAPI = async (id) => {
 
 
 
+// POST request
 
+const postData = async (value) => {
+    const data = {description: value, done: false};
+    
+      try {
+        const response = await fetch(url, {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        return await response.json();
+      } catch (error) {
+        console.log(error);
+      }
+    }; 
+    
+    //GET Request
+    const getData = async () => {
+      try {
+        const response = await fetch(url, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        
+        return await response.json();
+      } catch (error) {
+        console.log(error);
+      }
+    }; 
