@@ -84,7 +84,6 @@ export const deleteTaskAPI = async (id) => {
 };
 
 
-
 // POST request
 
 const postData = async (value) => {
