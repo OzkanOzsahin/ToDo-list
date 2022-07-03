@@ -88,9 +88,7 @@ async function createDom() {
   
   };
 
- 
-  createDom()
-
+ createDom()
 
 // Creating a new task
 const button = document.getElementById("submit");
